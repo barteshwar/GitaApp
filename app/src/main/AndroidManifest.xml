@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OpeningPage">
-        <activity android:name=".ShlokaTabsSelected"></activity>
+        <activity android:name=".ShlokaOfTheDay"></activity>
+        <activity android:name=".RandomShloka" />
+        <activity android:name=".ShlokaTabsSelected" />
         <activity android:name=".grid" />
         <activity android:name=".ShlokaTabsFull" />
         <activity android:name=".ChapterList" />
@@ -20,6 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver android:name=".showNotification" android:exported="true"> <intent-filter> <action android:name="android.intent.action.BOOT_COMPLETED"/> <action android:name="android.intent.action.INPUT_METHOD_CHANGED" /> </intent-filter> </receiver>
     </application>
 
 </manifest>

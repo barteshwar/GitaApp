@@ -25,37 +25,41 @@
         app:layout_constraintVertical_bias="0.413"
         app:srcCompat="@drawable/bhagwadgita" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
-        android:padding="20dp"
+        android:paddingBottom="10dp"
+        android:background="@color/yellow"
+        android:textColor="@android:color/black"
         android:scaleType="fitCenter"
-        android:layout_width="130dp"
-        android:layout_height="150dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="123dp"
         android:layout_marginRight="123dp"
-        android:drawableTop="@drawable/ic_android_black_24dp"
+        android:drawableTop="@mipmap/emotions2_foreground"
         android:text="Gita for specific emotions"
+        android:adjustViewBounds="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button2"
-        android:padding="20dp"
-        android:scaleType="fitCenter"
-        android:layout_width="130dp"
-        android:layout_height="150dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginLeft="17dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="200dp"
-        android:drawableTop="@drawable/ic_android_black_24dp"
+        android:background="@color/yellow"
+        android:drawableTop="@mipmap/book2_foreground"
+        android:paddingBottom="10dp"
+        android:scaleType="fitCenter"
         android:text="Read the complete Gita"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,6 +67,24 @@
         app:layout_constraintStart_toEndOf="@+id/button"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.047" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="146dp"
+        android:text="Random Shloka"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:layout_editor_absoluteX="38dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="Shloka Of The Day"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        tools:layout_editor_absoluteX="52dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

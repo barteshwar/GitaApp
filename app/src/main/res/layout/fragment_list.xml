@@ -12,6 +12,9 @@
         android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textStyle="bold"
         android:text="TextView"
         tools:layout_editor_absoluteX="156dp"
         tools:layout_editor_absoluteY="273dp" />

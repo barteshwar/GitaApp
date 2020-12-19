@@ -10,13 +10,14 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ChapterList extends AppCompatActivity {
-    String items[] = new String[]{"chapter 1", "chapter 2","chapter 3","chapter 4","chapter 5","chapter 6", "chapter 7","chapter 8","chapter 9","chapter 10",
-            "chapter 11", "chapter 12","chapter 13","chapter 14","chapter 15","chapter 16", "chapter 17","chapter 18"};
+    String items[] = new String[]{"Chapter 1", "Chapter 2","Chapter 3","Chapter 4","Chapter 5","Chapter 6", "Chapter 7","Chapter 8","Chapter 9","Chapter 10",
+            "Chapter 11", "Chapter 12","Chapter 13","Chapter 14","Chapter 15","Chapter 16", "Chapter 17","Chapter 18"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chapter_list);
+        this.setTitle("The Complete Bhagwad Gita");
         ListView listview = (ListView)findViewById(R.id.listview);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,items);
         listview.setAdapter(adapter);
