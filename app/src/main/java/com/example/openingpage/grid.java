@@ -11,10 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 public class grid extends AppCompatActivity {
     GridView gridView;
     String[] numberWord = {"Anger","Fear","Lust","Confusion","Feeling Sinful","Forgiveness","Envy","Forgetfulness","Pride","Greed",
-    "Death of a loved one","Peace","Demotivated","Laziness","Temptation","Depression","Loneliness","Uncontrolled mind","Discriminated","Losing Hope"};
-    int[] numImage = {R.mipmap.anger,R.drawable.monitor,R.drawable.checkmark,R.drawable.cut,R.drawable.gift,R.drawable.location,R.drawable.play
-            ,R.drawable.truck,R.drawable.wifi,R.drawable.www,R.mipmap.anger,R.drawable.monitor,R.drawable.checkmark,R.drawable.cut,R.drawable.gift,R.drawable.location,R.drawable.play
-            ,R.drawable.truck,R.drawable.wifi,R.drawable.www};
+    "Death","Peace","Demotivated","Laziness","Temptation","Depression","Loneliness","Uncontrolled mind","Discriminated","Losing Hope"};
+    int[] numImage = {R.drawable.anger,R.drawable.fear,R.drawable.lust,R.drawable.confusion,R.drawable.sin,R.drawable.forgiveness,R.drawable.envy
+            ,R.drawable.forgetfulness,R.drawable.pride,R.drawable.greed,R.drawable.death,R.drawable.peace,R.drawable.demotivated,R.drawable.laziness,R.drawable.temptation,R.drawable.depression,R.drawable.loneliness
+            ,R.drawable.uncontrolledmind,R.drawable.discriminated,R.drawable.losinghope};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -10,8 +10,24 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ChapterList extends AppCompatActivity {
-    String items[] = new String[]{"Chapter 1", "Chapter 2","Chapter 3","Chapter 4","Chapter 5","Chapter 6", "Chapter 7","Chapter 8","Chapter 9","Chapter 10",
-            "Chapter 11", "Chapter 12","Chapter 13","Chapter 14","Chapter 15","Chapter 16", "Chapter 17","Chapter 18"};
+    String items[] = new String[]{"\nChapter 1 \nObserving the armies on the battlefield of Kurukshetra\n",
+            "\nChapter 2 \nContents of the Gita summarized\n",
+            "\nChapter 3 \nKarma-yoga\n",
+            "\nChapter 4 \nTranscendental Knowledge\n",
+            "\nChapter 5 \nKarma-yoga-Action in Krsna Consciousness\n",
+            "\nChapter 6 \nSankhya-yoga\n",
+            "\nChapter 7 \nKnowledge of the Absolute\n",
+            "\nChapter 8 \nAttaining the Supreme\n",
+            "\nChapter 9 \nThe Most Confidential Knowledge\n",
+            "\nChapter 10 \nThe Opulence of the Absolute\n",
+            "\nChapter 11 \nThe Universal Form\n",
+            "\nChapter 12 \nDevotional Service\n",
+            "\nChapter 13 \nNature, the Enjoyer, and Consciousness\n",
+            "\nChapter 14 \nThe Three Modes of Material Nature\n",
+            "\nChapter 15 \nThe Yoga of the Supreme Person\n",
+            "\nChapter 16 \nThe Divine and Demoniac Natures\n",
+            "\nChapter 17 \nThe Divisions of Faith\n",
+            "\nChapter 18 \nConclusion - The Perfection of Renunciation\n"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

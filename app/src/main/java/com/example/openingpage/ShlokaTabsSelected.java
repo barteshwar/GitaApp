@@ -16,8 +16,13 @@ public class ShlokaTabsSelected extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shloka_tabs_selected);
+        String[] numberWord = {"Anger","Fear","Lust","Confusion","Feeling Sinful","Forgiveness","Envy","Forgetfulness","Pride","Greed",
+                "Death","Peace","Demotivated","Laziness","Temptation","Depression","Loneliness","Uncontrolled mind","Discriminated","Losing Hope"};
+
         Intent intent = getIntent();
         int i = intent.getIntExtra("value",1);
+
+        this.setTitle("Bhagwad Gita on: " + numberWord[i]);
 
         tab = (TabLayout)findViewById(R.id.tabs);
         ViewPager viewPager = (ViewPager)findViewById(R.id.viewpager);
@@ -73,9 +78,9 @@ public class ShlokaTabsSelected extends AppCompatActivity {
                 {"Ch 3 Shloka 8","Ch 3 Shloka 20", "Ch 6 Shloka 16", "Ch 18 Shloka 39"},
                 {"Ch 2 Shloka 60","Ch 2 Shloka 61","Ch 2 Shloka 70","Ch 7 Shloka 14"},
                 {"Ch 2 Shloka 3", "Ch 2 Shloka 14", "Ch 5 Shloka 21"},
-                {"Ch 6 Shloka 30","Ch 9 Shloka 29", "Ch 6 Shloka 16", "Ch 13 Shloka 16", "Ch 13 Shloka 18"},
-                {"Ch 5 Shloka 18","Ch 5 Shloka 19","Ch 6 Shloka 32",  "Ch 9 Shloka 29"},
-                {"Ch 6 Shloka 5","Ch 6 Shloka 6","Ch 6 Shloka 26", "Ch 6 Shloka 35"},
+                {"Ch 6 Shloka 30","Ch 9 Shloka 29", "Ch 13 Shloka 16", "Ch 13 Shloka 18"},
+                {"Ch 6 Shloka 5","Ch 6 Shloka 6","Ch 6 Shloka 26",  "Ch 6 Shloka 35"},
+                {"Ch 5 Shloka 18","Ch 5 Shloka 19","Ch 6 Shloka 32", "Ch 9 Shloka 29"},
                 {"Ch 4 Shloka 11","Ch 9 Shloka 22","Ch 9 Shloka 34","Ch 18 Shloka 66","Ch 18 Shloka 78"}};
 
 
