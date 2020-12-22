@@ -1,15 +1,23 @@
 package com.example.openingpage;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.Calendar;
 
 public class ShlokaOfTheDay extends AppCompatActivity {
     TextView chapterAndShloka;
     TextView shlokaText;
+    private AdView mAdView;
+    Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +26,11 @@ public class ShlokaOfTheDay extends AppCompatActivity {
         chapterAndShloka = (TextView)findViewById(R.id.chapterandshloka);
         shlokaText = (TextView)findViewById(R.id.textView2);
 
-
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .build();
+        mAdView.loadAd(adRequest);
 
 
         String[][] shlokas;
@@ -755,5 +767,24 @@ public class ShlokaOfTheDay extends AppCompatActivity {
         //int i2 = r2.nextInt(shlokas[i1].length - 0) + 0;
         chapterAndShloka.setText("Chapter "+(chapter+1)+" Shloka "+shloka_number[chapter][shloka]);
         shlokaText.setText(shlokas[chapter][shloka]);
+        button = (Button)findViewById(R.id.button7);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                    shareIntent.setType("text/plain");
+                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Bhagawad Gita Shloka");
+                    String shareMessage = shlokas[chapter][shloka];
+                    shareMessage = shareMessage + "\n\nVia the Bhagawad Gita app: https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID +"\n\n";
+                    shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
+                    startActivity(Intent.createChooser(shareIntent, "choose one"));
+                } catch(Exception e) {
+                    //e.toString();
+                }
+            }
+        });
+
+
     }
 }

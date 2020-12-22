@@ -5,6 +5,7 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
      Button completeGita;
      Button shlokaOfTheDay;
      Button randomShloka;
+     Button aboutTheGita;
+     Button shareApp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -752,17 +755,26 @@ public class MainActivity extends AppCompatActivity {
         completeGita = (Button) findViewById(R.id.button2);
         randomShloka = (Button)findViewById(R.id.button4);
         shlokaOfTheDay = (Button)findViewById(R.id.button3);
+        aboutTheGita = (Button)findViewById(R.id.button5);
+        shareApp = (Button)findViewById(R.id.button6);
 
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 03);
-        calendar.set(Calendar.MINUTE, 33);
+        calendar.set(Calendar.HOUR_OF_DAY, 00);
+        calendar.set(Calendar.MINUTE, 02);
         calendar.set(Calendar.SECOND, 0);
 
         Intent notifyIntent = new Intent(getApplicationContext(),showNotification.class);
-        notifyIntent.setFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),0,notifyIntent,PendingIntent.FLAG_UPDATE_CURRENT);
-        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,  calendar.getTimeInMillis(),1000 * 60 * 60 * 24, pendingIntent);
+
+        boolean isWorking = (PendingIntent.getBroadcast(MainActivity.this, 0, notifyIntent, PendingIntent.FLAG_NO_CREATE) != null);
+        if (isWorking) {
+            Log.d("alarm", "is working");} else {Log.d("alarm", "is not working");
+        }
+        if(!isWorking) {
+            notifyIntent.setFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+            AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 1000 * 60 * 60 * 24, pendingIntent);
+        }
 
         completeGita.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -799,6 +811,34 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        shareApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                    shareIntent.setType("text/plain");
+                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "My application name");
+                    String shareMessage= "\nI'm using the Bhagawad Gita app. It has the entire Bhagawad Gita, and verses organized by topics. You can get it here: \n\n";
+                    shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID +"\n\n";
+                    shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
+                    startActivity(Intent.createChooser(shareIntent, "choose one"));
+                } catch(Exception e) {
+                    //e.toString();
+                }
 
+
+            }
+
+
+        });
+
+        aboutTheGita.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),AboutTheGita.class);
+                startActivity(intent);
+
+            }
+        });
     }
 }
