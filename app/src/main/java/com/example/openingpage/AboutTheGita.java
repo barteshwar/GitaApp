@@ -12,7 +12,7 @@ public class AboutTheGita extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_the_gita);
 
-        this.setTitle("About The Bhagwad Gita");
+        this.setTitle("About The Bhagavad Gita");
 
         text = (TextView)findViewById(R.id.textView);
         text.setText("The Bhagavad Gita (“Song of God” or “Song of the Lord”) is among the most important religious texts of Hinduism. It has 700 shlokas, and is part of the epic Mahabharata (chapters 23–40 of Bhishma Parva).\n" +

@@ -33,7 +33,7 @@ public class ChapterList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chapter_list);
-        this.setTitle("The Complete Bhagwad Gita");
+        this.setTitle("The Complete Bhagavad Gita");
         ListView listview = (ListView)findViewById(R.id.listview);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,items);
         listview.setAdapter(adapter);

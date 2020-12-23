@@ -22,13 +22,13 @@ public class ShlokaOfTheDay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shloka_of_the_day);
-        this.setTitle("Bhagwad Gita: Shloka of the day");
+        this.setTitle("Bhagavad Gita: Shloka of the day");
         chapterAndShloka = (TextView)findViewById(R.id.chapterandshloka);
         shlokaText = (TextView)findViewById(R.id.textView2);
 
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                //.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                 .build();
         mAdView.loadAd(adRequest);
 
@@ -774,9 +774,9 @@ public class ShlokaOfTheDay extends AppCompatActivity {
                 try {
                     Intent shareIntent = new Intent(Intent.ACTION_SEND);
                     shareIntent.setType("text/plain");
-                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Bhagawad Gita Shloka");
+                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Bhagavad Gita Shloka");
                     String shareMessage = shlokas[chapter][shloka];
-                    shareMessage = shareMessage + "\n\nVia the Bhagawad Gita app: https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID +"\n\n";
+                    shareMessage = shareMessage + "\n\nVia the Bhagavad Gita app: https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID +"\n\n";
                     shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
                     startActivity(Intent.createChooser(shareIntent, "choose one"));
                 } catch(Exception e) {

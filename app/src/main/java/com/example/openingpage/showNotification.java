@@ -65,8 +65,8 @@ public class showNotification extends BroadcastReceiver {
 
         int shloka = num % length;
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(context, NOTIFICATION_CHANNEL_ID)
-                .setSmallIcon(R.mipmap.ic_launcher_round)
-                .setContentTitle("Bhagwad Gita: Shloka Of The Day")
+                .setSmallIcon(R.mipmap.bhagavad_gita_icon_round)
+                .setContentTitle("Bhagavad Gita: Shloka Of The Day")
                 .setContentText(shlokas[chapter][shloka])
                 .setAutoCancel(true)
                 .setSound(defaultSound)

@@ -19,7 +19,7 @@ public class grid extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grid);
-        this.setTitle("Bhagwad Gita For Specific Emotions");
+        this.setTitle("Bhagavad Gita For Specific Emotions");
         gridView = (GridView)findViewById(R.id.grid_view);
 
         MainAdapter adapter = new MainAdapter(grid.this,numberWord,numImage);

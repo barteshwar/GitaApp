@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/bhagavad_gita_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/bhagavad_gita_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OpeningPage">
         <activity android:name=".AboutTheGita"></activity>
@@ -35,7 +35,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="ca-app-pub-8752170187440412~3733000336"/>
     </application>
 
 </manifest>

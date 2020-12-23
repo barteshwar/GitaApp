@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        this.setTitle("Bhagwad Gita App");
+        this.setTitle("Bhagavad Gita App");
         MediaPlayer ring= MediaPlayer.create(getApplicationContext(), R.raw.sound);
         ring.start();
 
@@ -496,7 +496,7 @@ public class MainActivity extends AppCompatActivity {
                         "O Visnu, I see You devouring all people in Your flaming mouths and covering the universe with Your immeasurable rays. Scorching the worlds, You are manifest.   ",
                         "O Lord of lords, so fierce of form, please tell me who You are. I offer my obeisances unto You; please be gracious to me. I do not know what Your mission is, and I desire to hear of it.   ",
                         "The Blessed Lord said: Time I am, destroyer of the worlds, and I have come to engage all people. With the exception of you [the Pandavas], all the soldiers here on both sides will be slain.   ",
-                        "Therefore get up and prepare to fight. After conquering your enemies you will enjoy a flourishing kingdom. They are already put to death by My arrangement, and you, O Savyasacin, can be but an instmment in the fight.   ",
+                        "Therefore get up and prepare to fight. After conquering your enemies you will enjoy a flourishing kingdom. They are already put to death by My arrangement, and you, O Savyasacin, can be but an instrument in the fight.   ",
                         "The Blessed Lord said: All the great warriors-Drona, Bhisma, Jayadratha, Karna-are already destroyed. Simply fight, and you will vanquish your enemies.   ",
                         "Sanjaya said to Dhrtarastra: O King, after hearing these words from the Supreme Personality of Godhead, Arjuna trembled, fearfully offered obeisances with folded hands and began, falteringly, to speak as follows:   ",
                         "O Hrsikesa, the world becomes joyful upon hearing Your name and thus everyone becomes attached to You. Although the perfected beings offer You their respectful homage, the demons are afraid, and they flee here and there. All this is rightly done.   ",
@@ -759,8 +759,8 @@ public class MainActivity extends AppCompatActivity {
         shareApp = (Button)findViewById(R.id.button6);
 
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 00);
-        calendar.set(Calendar.MINUTE, 02);
+        calendar.set(Calendar.HOUR_OF_DAY, 17);
+        calendar.set(Calendar.MINUTE, 20);
         calendar.set(Calendar.SECOND, 0);
 
         Intent notifyIntent = new Intent(getApplicationContext(),showNotification.class);
