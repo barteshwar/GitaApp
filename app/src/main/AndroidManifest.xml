@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.openingpage">
+    package="com.techbharata.bhagavadgita">
 
     <application
         android:allowBackup="true"
@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/bhagavad_gita_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OpeningPage">
-        <activity android:name=".AboutTheGita"></activity>
-        <activity android:name=".ShlokaOfTheDay" />
-        <activity android:name=".RandomShloka" />
-        <activity android:name=".ShlokaTabsSelected" />
-        <activity android:name=".grid" />
-        <activity android:name=".ShlokaTabsFull" />
-        <activity android:name=".ChapterList" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.techbharata.bhagavadgita.AboutTheGita"></activity>
+        <activity android:name="com.techbharata.bhagavadgita.ShlokaOfTheDay" />
+        <activity android:name="com.techbharata.bhagavadgita.RandomShloka" />
+        <activity android:name="com.techbharata.bhagavadgita.ShlokaTabsSelected" />
+        <activity android:name="com.techbharata.bhagavadgita.grid" />
+        <activity android:name="com.techbharata.bhagavadgita.ShlokaTabsFull" />
+        <activity android:name="com.techbharata.bhagavadgita.ChapterList" />
+        <activity android:name="com.techbharata.bhagavadgita.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +25,7 @@
         </activity>
 
         <receiver
-            android:name=".showNotification"
+            android:name="com.techbharata.bhagavadgita.showNotification"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -36,6 +36,16 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-8752170187440412~3733000336"/>
+
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/bhagavad_gita_icon_generated" />
+
+        <meta-data android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/yellow" />
     </application>
+
+
 
 </manifest>
